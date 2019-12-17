@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	text-decoration: none;
+}
+
+/* General Styles */
+
+body {
+    background-color: #D5EFF2;
+}
+
+h1, h2, h3 {
+	text-transform: lowercase;
+	font-family: 'Sulphur Point', sans-serif;
+	font-size: 20px;
+}
+
+h1 {
+	font-style: italic;
+	color: #BF0426;
+	font-size: 65px;
+	font-weight: 700;
+	margin: 100px 80px;
+	text-align: center;
+	text-shadow: 3px 3px 3px #A9BF04;
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+	font-size: 25px;
+	color:rgb(226, 128, 7);
+	margin: 15px;
+}
+
+
+/* Wrapper - User Inputs */
+
+.wrapper {
+	height: 100vh;
+	text-align: center;
+
+}
+
+.choices {
+	margin-bottom: 40px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+
+}
+
+input[type=radio] {
+	margin: 20px;
+
+}
+
+input[type=submit] {
+	background-color: #A9BF04; 
+	border: none;
+	color: white;
+	font-family: 'Sulphur Point', sans-serif;
+	font-weight: 700;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 50px;
+	font-size: 25px;
+}
+
+
+/* Recipes Container */
+
+.epicook-container{
+	height: 100vh;
+	background-image: url(fruit-salads-in-plate-1640774.jpg);
+	background-size: cover;
+}
+
+.recipe-box {
+	align-items: center;
+	display: flex;
+	float: left;
+	margin: 5px;
+	padding: 18px;
+	background-color:rgba(226, 127, 7, 0.795);
+	font-family: 'Sulphur Point', sans-serif;
+	font-size: 20px;
+	text-decoration: none;
+	text-align: center;
+}
+
+.recipe-details {
+	font-family: 'Sulphur Point', sans-serif;
+	font-size: 20px;
+	text-decoration: none;
+	text-align: center;
+}
+
+/* Footer */
+
+#data-courtesy {
+	background-color: #D5EFF2;
+	font-size: 18px;
+	color: #BF0426;
+	text-align: center;
+
+}
