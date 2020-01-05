@@ -1,130 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto|Sulphur+Point:400,700&display=swap" rel="stylesheet">
-  <title>epiCook APP</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Sulphur+Point:400,700&display=swap" rel="stylesheet">
+    <title>epiCook APP</title>
+  </head>
 
-<body>
-  <div class="wrapper">
+  <body>
     <header>
-      <h1>find your epiCook recipe!</h1>
-      <form>
-      <p>select your diet preference: </p>
-      <div class="choices">
-        <input type="radio" name="diets" value="popular"> Popular
-        <input type="radio" name="diets" value="vegetarian"> Vegetarian
-        <input type="radio" name="diets" value="vegan"> Vegan
-        <input type="radio" name="diets" value="gluten-free"> Gluten-Free
-        <input type="radio" name="diets" value="peanut-free"> Peanut-Free 
+      <div class="content-wrapper">
+        <h1>find your epiCook recipe!</h1>
+          <form>
+            <p>select your diet preference: </p>
+            <div class="choices">
+              <input type="radio" name="diets" value="popular"> popular
+              <input type="radio" name="diets" value="vegetarian"> vegetarian
+              <input type="radio" name="diets" value="vegan"> vegan
+              <input type="radio" name="diets" value="gluten-free"> gluten-free
+              <input type="radio" name="diets" value="peanut-free"> peanut-free 
+            </div>
+            <p>sweeet! now add your main ingredient: </p>
+            <div class="choices">
+              <input type="text" name="ingredients"> 
+            </div>
+              <input type="submit" value="check my epiCook!">
+          </form>
       </div>
-  
-      <p>sweeet! now add your main ingredient: </p>
-      <div class="choices">
-      <input type="text" name="ingredients"> 
-      </div>
-      <input type="submit" value="check my epiCook!">
-      </form>
     </header>
-  </div>
-
-    <div class="epicook-container">
-    </div>
   
-    <footer>
-      <p id= "data-courtesy">
-        data courtesy of
+    <section>
+      <div class="epicook-container">
+        <div class="recipes">
+        <!-- recipes goes here -->
+        </div>
+      </div>
+    </section>
+    
+    <footer class="footer">
+      <p class= "data-courtesy"> data courtesy of
         <a href="https://www.edamam.com/"> 
-          <img src="logo.png" alt="EDAMAN logo" style="width: 70px; margin-left: 5px;"> 
+        <img src="edamam-logo.png" alt="EDAMAM logo" style="width: 70px; margin-left: 5px;"> 
         </a> 
       </p>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <script> 
-
-    const app = {};
-    
-    let existIngredient = false;
-    
-    app_id = `9c79ecbe`,
-    app.key = `8ec80810875fa2db5bdd5498c5e1292b`,
-    
-    app.getRecipes = (searchTerm) => {
-      $.ajax({
-          url: `https://api.edamam.com/search`,
-          method: `GET`,
-          dataType: `jsonp`,
-          data: {
-              app_id: app_id,
-              app_key: app.key,
-              q: searchTerm
-          }
-      }).then(result => {
-
-          const ingredientUserType = $("input[type='text']").val();
-          // Filter ingredients to match the ingredient from user input.
-          result.hits.forEach(element => {
-            ingredients = element.recipe.ingredients;
-            ingredients.forEach(ingred => {
-                if (ingred.text.includes(ingredientUserType)){
-                  existIngredient = true;
-                }
-            });
-
-            if (existIngredient === true) {
-              const htmlToAppend = `
-              <div class="recipe-box">
-                <a href="${element.recipe.url}" 
-                  <h2 class="recipe-details">${element.recipe.label}</h2>
-                    <div class="recipe-container">
-                      <img class="recipe-image" src=${element.recipe.image} alt=${element.recipe.label}> 
-                    </div>
-                  <h3 class="recipe-details"> Calories: ${parseInt(element.recipe.calories)} </h3>
-                </a>
-              </div>
-              `;
-            $('.epicook-container').append(htmlToAppend);
-
-            }
-            existIngredient = false;
-        });
-      });
-    };
-
-    app.getUserSelection = () => {
-      $('form').on('submit', function(e){
-        e.preventDefault();
-
-        const dietUserSelect = $("input[type='radio']:checked").val();
-
-        app.getRecipes(dietUserSelect);
-
-        $('.epicook-container').empty();
-        $(window).scrollTop($(".epicook-container").offset().top);
-
-        
-
-      });
-    };
-
-
-    app.init = () => {
-      app.getUserSelection();
-    };
-
-
-    // Document Ready/Init
-    $(function(){
-      app.init();
-    });
-
-    </script>
-  
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

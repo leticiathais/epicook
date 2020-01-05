@@ -9,15 +9,14 @@
 }
 
 /* General Styles */
-
-body {
-    background-color: #D5EFF2;
+html, body {
+	padding: 0;
+	margin: 0 auto;
 }
 
 h1, h2, h3 {
 	text-transform: lowercase;
 	font-family: 'Sulphur Point', sans-serif;
-	font-size: 20px;
 }
 
 h1 {
@@ -25,7 +24,6 @@ h1 {
 	color: #BF0426;
 	font-size: 65px;
 	font-weight: 700;
-	margin: 100px 80px;
 	text-align: center;
 	text-shadow: 3px 3px 3px #A9BF04;
 }
@@ -37,25 +35,21 @@ p {
 	margin: 15px;
 }
 
-
-/* Wrapper - User Inputs */
-
-.wrapper {
+/* Header - User Inputs */
+.content-wrapper {
 	height: 100vh;
 	text-align: center;
-
+	background-color: #D5EFF2;
 }
 
 .choices {
 	margin-bottom: 40px;
 	font-family: 'Roboto', sans-serif;
 	font-size: 18px;
-
 }
 
 input[type=radio] {
 	margin: 20px;
-
 }
 
 input[type=submit] {
@@ -71,41 +65,60 @@ input[type=submit] {
 	font-size: 25px;
 }
 
-
-/* Recipes Container */
-
+/* Recipe Results Section */
 .epicook-container{
 	height: 100vh;
-	background-image: url(fruit-salads-in-plate-1640774.jpg);
+	background-image: url(dan-gold-5O1ddenSM4g-unsplash.jpg);
 	background-size: cover;
+	overflow: scroll;
+	width: 100%;
+}
+
+.recipes {
+	/* position: relative;		 */
+	padding: 0 50px;
+	margin: 0 auto;	
+	padding: 60px 80px;
 }
 
 .recipe-box {
-	align-items: center;
-	display: flex;
 	float: left;
-	margin: 5px;
-	padding: 18px;
-	background-color:rgba(226, 127, 7, 0.795);
-	font-family: 'Sulphur Point', sans-serif;
-	font-size: 20px;
-	text-decoration: none;
-	text-align: center;
+	width: 300px;
+	margin: 62px;
 }
 
-.recipe-details {
-	font-family: 'Sulphur Point', sans-serif;
-	font-size: 20px;
-	text-decoration: none;
+.recipe-title {
 	text-align: center;
+	padding: 30px 30px;
+	margin: 0 auto;
+	height: 35px;
+	font-size: 20px;
+	background: rgba(169, 191, 4, 0.692);
+	color: whitesmoke;
 }
+
+.recipe-image {
+	background-size: cover;
+	display: block;
+	padding: 0;
+	margin: 0 auto;
+}
+
+.recipe-calories {
+	text-align: center;
+	font-style: italic;
+	font-size: 18px;
+	padding: 20px;
+	background: rgba(245, 245, 245, 0.692);
+	color: black;
+}
+
 
 /* Footer */
-
-#data-courtesy {
-	background-color: #D5EFF2;
+.data-courtesy {
+	margin: 20px;
+	font-family: 'Sulphur Point', sans-serif;
 	font-size: 18px;
-	color: #BF0426;
+	color: gray;
 	text-align: center;
-
 }
