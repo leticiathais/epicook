@@ -115,10 +115,32 @@ input[type=submit] {
 
 
 /* Footer */
-.data-courtesy {
-	margin: 20px;
-	font-family: 'Sulphur Point', sans-serif;
-	font-size: 18px;
-	color: gray;
+.footer {
+	position: inherit;
+	/* left: 0;
+	bottom: 0; */
+	height: 50px;
+	color: white;
+	background-color: #262626;
 	text-align: center;
+	padding: 20px 20px;
+}
+
+.made-with {
+	font-size: 16px;
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+.icon {
+    width: 15px;
+    color: rgb(180, 47, 47);
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+
+.data-courtesy {
+	font-size: 18px;
+	margin: 0;
 }
