@@ -28,7 +28,7 @@ const app = {};
             });
 
             if (existIngredient === true) {
-              const htmlToAppend = `
+              const htmlToAppendTrue = `
               <div class="recipe-box">
                 <a href="${element.recipe.url}"> 
                   <h2 class="recipe-title">${element.recipe.label}</h2>
@@ -37,11 +37,20 @@ const app = {};
                 </a>
               </div>
               `;
-            $('.recipes').append(htmlToAppend);
-
+            $('.recipes').append(htmlToAppendTrue);
             }
             existIngredient = false;
         });
+
+        if ($('.recipes').is(':empty')) {
+            const htmlToAppendFalse = `
+            <div class="alert-box">
+                <h2> Sorry, we couldn't find your recipe :( </h2>
+            </div>
+            `;
+        $('.recipes').append(htmlToAppendFalse);
+        }
+        
       });
     };
 
