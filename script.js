@@ -1,5 +1,5 @@
 const app = {};
-    
+
 $(".option").on('click',function() {
   const $this = $(this)
   $(".option").css("opacity", "0.5");
@@ -24,7 +24,7 @@ $(".option").on('click',function() {
           }
       }).then(result => {
             console.log(result);
-          const ingredientUserType = $("input[type='text']").val();
+          const ingredientUserType = $("input[type='text']").val().toLowerCase();
           // Filter ingredients to match the ingredient from user input.
           result.hits.forEach(element => {
             ingredients = element.recipe.ingredients;
