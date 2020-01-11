@@ -52,7 +52,11 @@ $(".option").on('click',function() {
         if ($('.recipes').is(':empty')) {
             const htmlToAppendFalse = `
             <div class="alert-box">
-                <h2> Sorry, we couldn't find your recipe :( </h2>
+                <form>
+                  <h2 class="error-title"> Oooops! </h2>
+                  <h3 class="error-message"> We couldn't find your recipe, <br> try again with another ingredient. </h3>
+                  <input type="submit" value="Try Again!">
+                <form> 
             </div>
             `;
         $('.recipes').append(htmlToAppendFalse);
@@ -66,7 +70,6 @@ $(".option").on('click',function() {
         e.preventDefault();
 
         const dietUserSelect = $(".option[style='opacity: 1;']").text()
-
         app.getRecipes(dietUserSelect);
 
         $('.recipes').empty();
