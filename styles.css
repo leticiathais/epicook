@@ -14,62 +14,130 @@ html, body {
 	margin: 0 auto;
 }
 
-h1, h2, h3 {
+h2, h3 {
 	text-transform: lowercase;
 	font-family: 'Sulphur Point', sans-serif;
 }
 
 h1 {
+	font-family: 'Sulphur Point', sans-serif;
 	font-style: italic;
-	color: #BF0426;
-	font-size: 65px;
+	color: #A60303;
+	font-size: 45px;
 	font-weight: 700;
-	text-align: center;
-	text-shadow: 3px 3px 3px #A9BF04;
+	text-align: left;
+	margin-left: 5vh;
+	padding-top: 5vh;
 }
 
-p {
-	font-family: 'Roboto', sans-serif;
-	font-size: 25px;
-	color:rgb(226, 128, 7);
-	margin: 15px;
-}
 
-/* Header - User Inputs */
+/* Main */
 .content-wrapper {
 	height: 100vh;
 	text-align: center;
-	background-color: #D5EFF2;
+	background-image: url(resources/images/sebastien-marchand-oVIUvwm2dvM-unsplash.jpg);
+	background-size: cover;
 }
 
-.choices {
-	margin-bottom: 40px;
+.title-one {
+	font-family: 'Roboto', sans-serif;
+	font-size:30px;
+	color:whitesmoke;
+	margin-top: 6vh;
+	text-align: center;
+}
+
+.title-two {
+	font-family: 'Sulphur Point', sans-serif;
+	font-size: 68px;
+	font-weight: 700;
+	color:whitesmoke;
+	margin-top: 8vh;
+	margin-bottom: 2vh;
+	text-align: center;
+}
+
+.search-box {
+	margin-bottom: 2vh;
 	font-family: 'Roboto', sans-serif;
 	font-size: 18px;
 }
 
-input[type=radio] {
-	margin: 20px;
+input[type=text] {
+	background-color: rgba(245, 245, 245, 0.459);
+	width: 300px;
+    padding: 10px;
+    border-radius: 3px;
 }
 
+/* .diet.box {
+} */
+
+.option {
+  color: white;
+	font-family: 'Sulphur Point', sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+  display: inline-block;
+	width: 100px;
+	text-align: center;
+	background-size: cover;
+	opacity: 0.5;
+	border-radius:8px;   
+	padding: 2vh;
+	margin: 1vh;
+	cursor: pointer;
+}
+
+.option:hover {
+  opacity: 1;
+}
+
+#option-1 {
+  background-image: url(resources/images/popular_alan-hardman-SU1LFoeEUkk-unsplash.jpg);
+}
+
+#option-2 {
+  background-image: url(resources/images/vegetarian_cooked-food-in-bowl-2456434.jpg);
+}
+
+#option-3 {
+  background-image: url(resources/images/vegan_sliced-tomato-and-avocado-on-white-plate-1143754.jpg);
+}
+
+#option-4 {
+  background-image: url(resources/images/glutenfree_basil-leaves-and-avocado-on-sliced-bread-on-white-ceramic-1351238.jpg);
+}
+
+#option-5 {
+  background-image: url(resources/images/peanutfree_piotr-chrobot-CKipn7XSyEU-unsplash.jpg);
+}
+
+
 input[type=submit] {
-	background-color: #A9BF04; 
+	background-color: rgb(160, 53, 53);
 	border: none;
 	color: white;
 	font-family: 'Sulphur Point', sans-serif;
 	font-weight: 700;
-	padding: 15px 32px;
+	width: 230px;
+	padding: 10px;
 	text-align: center;
 	text-decoration: none;
-	border-radius: 50px;
-	font-size: 25px;
+	border-radius: 15px;
+	font-size: 20px;
+	margin-top: 8vh;
+}
+
+input[type=submit]:hover,
+input[type=submit]:active {
+	background-color: #A60303;
 }
 
 /* Recipe Results Section */
 .epicook-container{
 	height: 100vh;
-	background-image: url(dan-gold-5O1ddenSM4g-unsplash.jpg);
-	background-size: cover;
+	background-color: rgba(45, 115, 34, 0.493);
 	overflow: scroll;
 	width: 100%;
 }
@@ -93,7 +161,7 @@ input[type=submit] {
 	margin: 0 auto;
 	height: 35px;
 	font-size: 20px;
-	background: rgba(169, 191, 4, 0.692);
+	background: rgba(217, 22, 4, 0.705);
 	color: whitesmoke;
 }
 
@@ -109,7 +177,7 @@ input[type=submit] {
 	font-style: italic;
 	font-size: 18px;
 	padding: 20px;
-	background: rgba(245, 245, 245, 0.692);
+	background: rgba(191, 154, 132, 0.808);
 	color: black;
 }
 
@@ -117,11 +185,12 @@ input[type=submit] {
 /* Footer */
 .footer {
 	position: inherit;
+	font-family: 'Sulphur Point', sans-serif;
 	/* left: 0;
 	bottom: 0; */
 	height: 50px;
 	color: white;
-	background-color: #262626;
+	background-color: #262624;
 	text-align: center;
 	padding: 20px 20px;
 }
@@ -142,5 +211,6 @@ input[type=submit] {
 
 .data-courtesy {
 	font-size: 18px;
+	
 	margin: 0;
 }

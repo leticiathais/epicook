@@ -1,10 +1,17 @@
 const app = {};
     
+$(".option").on('click',function() {
+  const $this = $(this)
+  $(".option").css("opacity", "0.5");
+  $this.css("opacity", "1");
+});
+
     let existIngredient = false;
     
     app_id = `9c79ecbe`,
     app.key = `8ec80810875fa2db5bdd5498c5e1292b`,
-    
+
+
     app.getRecipes = (searchTerm) => {
       $.ajax({
           url: `https://api.edamam.com/search`,
@@ -58,7 +65,7 @@ const app = {};
       $('form').on('submit', function(e){
         e.preventDefault();
 
-        const dietUserSelect = $("input[type='radio']:checked").val();
+        const dietUserSelect = $(".option[style='opacity: 1;']").text()
 
         app.getRecipes(dietUserSelect);
 
