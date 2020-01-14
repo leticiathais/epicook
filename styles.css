@@ -127,7 +127,7 @@ input[type=submit] {
 	text-decoration: none;
 	border-radius: 15px;
 	font-size: 20px;
-	margin-top: 8vh;
+	margin-top: 5vh;
 	outline: none;
 }
 
@@ -185,6 +185,17 @@ input[type=submit]:active {
 
 /* No Results Found */
 
+.error-message {
+	font-family: 'Roboto', sans-serif;
+	font-style: italic;
+	margin: 0 auto;
+	color: #A60303;
+	background-color: white;
+	border-radius: 10px;
+	width: 40vh;
+}
+
+
 .alert-box {
 	width: 80vh;
 	height: auto;
@@ -194,12 +205,12 @@ input[type=submit]:active {
 	padding: 70px 0;
 }
 
-.error-title {
+.not-found-title {
 	font-size: 30px;
 
 }
 
-.error-message {
+.not-found-message {
 	margin-top: 4vh;
 	font-size: 20px;
 }

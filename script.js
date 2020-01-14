@@ -11,7 +11,6 @@ $(".option").on('click',function() {
     app_id = `9c79ecbe`,
     app.key = `8ec80810875fa2db5bdd5498c5e1292b`,
 
-
     app.getRecipes = (searchTerm) => {
       $.ajax({
           url: `https://api.edamam.com/search`,
@@ -23,7 +22,6 @@ $(".option").on('click',function() {
               q: searchTerm
           }
       }).then(result => {
-            console.log(result);
           const ingredientUserType = $("input[type='text']").val().toLowerCase();
           // Filter ingredients to match the ingredient from user input.
           result.hits.forEach(element => {
@@ -53,8 +51,8 @@ $(".option").on('click',function() {
             const htmlToAppendFalse = `
             <div class="alert-box">
                 <form>
-                  <h2 class="error-title"> Oooops! </h2>
-                  <h3 class="error-message"> We couldn't find your recipe, <br> try again with another ingredient. </h3>
+                  <h2 class="not-found-title"> Oooops! </h2>
+                  <h3 class="not-found-message"> We couldn't find your recipe, <br> try again with another ingredient. </h3>
                   <input type="submit" value="Try Again!">
                 <form> 
             </div>
@@ -70,10 +68,24 @@ $(".option").on('click',function() {
         e.preventDefault();
 
         const dietUserSelect = $(".option[style='opacity: 1;']").text()
-        app.getRecipes(dietUserSelect);
+        
+        if (dietUserSelect === "") {
+          const htmlToAppendError = `
+            <div> 
+            ❗️Please choose a diet.
+            </div>
+          `;
+          $('.error-message').append(htmlToAppendError);
 
-        $('.recipes').empty();
-        $(window).scrollTop($(".epicook-container").offset().top);
+        } else {
+          app.getRecipes(dietUserSelect);
+
+          $('.error-message').empty()
+          $('.recipes').empty();
+          $(window).scrollTop($(".epicook-container").offset().top);
+        }
+
+        
       });
     };
 
