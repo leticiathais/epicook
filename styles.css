@@ -35,7 +35,7 @@ h1 {
 .content-wrapper {
 	height: 100vh;
 	text-align: center;
-	background-image: url(resources/images/sebastien-marchand-oVIUvwm2dvM-unsplash.jpg);
+	background-image: url(resources/images/sebastien-marchand-oVIUvwm2dvM-unsplash-min.jpg);
 	background-size: cover;
 }
 
@@ -139,7 +139,7 @@ input[type=submit]:active {
 /* Results Section */
 .epicook-container{
 	height: 100vh;
-	background-color: rgba(45, 115, 34, 0.493);
+	background-image: linear-gradient(to bottom right, rgba(166, 3, 3, 0.527), rgba(45, 115, 34, 0.863));
 	overflow: scroll;
 	width: 100%;
 }
