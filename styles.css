@@ -35,7 +35,7 @@ h1 {
 .content-wrapper {
 	height: 100vh;
 	text-align: center;
-	background-image: url(resources/images/sebastien-marchand-oVIUvwm2dvM-unsplash-min.jpg);
+	background-image: url(resources/images/header.jpg);
 	background-size: cover;
 }
 
@@ -95,23 +95,23 @@ input[type=text] {
 }
 
 #option-1 {
-  background-image: url(resources/images/popular_alan-hardman-SU1LFoeEUkk-unsplash.jpg);
+  background-image: url(resources/images/popular.jpg);
 }
 
 #option-2 {
-  background-image: url(resources/images/vegetarian_cooked-food-in-bowl-2456434.jpg);
+  background-image: url(resources/images/vegetarian.jpg);
 }
 
 #option-3 {
-  background-image: url(resources/images/vegan_sliced-tomato-and-avocado-on-white-plate-1143754.jpg);
+  background-image: url(resources/images/vegan.jpg);
 }
 
 #option-4 {
-  background-image: url(resources/images/glutenfree_basil-leaves-and-avocado-on-sliced-bread-on-white-ceramic-1351238.jpg);
+  background-image: url(resources/images/gluten-free.jpg);
 }
 
 #option-5 {
-  background-image: url(resources/images/peanutfree_piotr-chrobot-CKipn7XSyEU-unsplash.jpg);
+  background-image: url(resources/images/peanut-free.jpg);
 }
 
 /* Submit Button */
