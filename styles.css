@@ -146,15 +146,14 @@ input[type=submit]:active {
 
 /* Recipes Results  */
 .recipes {
-	padding: 0 50px;
+	padding: 5% 20%;
 	margin: 0 auto;	
-	padding: 60px 80px;
 }
 
 .recipe-box {
 	float: left;
 	width: 300px;
-	margin: 62px;
+	margin: 7%;
 }
 
 .recipe-title {
@@ -163,7 +162,7 @@ input[type=submit]:active {
 	margin: 0 auto;
 	height: 35px;
 	font-size: 20px;
-	background: rgba(217, 22, 4, 0.705);
+	background: rgba(166, 3, 3, 0.705);
 	color: whitesmoke;
 }
 
@@ -200,6 +199,7 @@ input[type=submit]:active {
 	width: 80vh;
 	height: auto;
 	margin: auto;
+	margin-top: 25vh;
 	background-color: rgba(217, 22, 4, 0.404);
 	text-align: center;
 	padding: 70px 0;
@@ -207,7 +207,6 @@ input[type=submit]:active {
 
 .not-found-title {
 	font-size: 30px;
-
 }
 
 .not-found-message {
@@ -244,6 +243,5 @@ input[type=submit]:active {
 
 .data-courtesy {
 	font-size: 18px;
-	
 	margin: 0;
 }
